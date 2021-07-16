@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>String 객체의 메소드 활용</title>
+</head>
+
+<body>
+    <h3>String 객체의 메소드 활용</h3>
+    <hr>
+    <script>
+        var a = new String("Boys and Girls");
+        var b = "!!";
+        document.write("a : " + a + "<br>");
+        document.write("b : " + b + "<br><hr>");
+        // 0번째 char가 무엇인가
+        document.write(a.charAt(0) + "<br>");
+        // 두 string을 합친다. 만약 두번째 파라미터가 존재하면 맨 뒤에 합쳐준다.
+        document.write(a.concat(b, "입니다") + "<br>");
+        // s가 최초로 발견되는 인덱스
+        document.write(a.indexOf("s") + "<br>");
+        // 없으면 -1
+        document.write(a.indexOf("And") + "<br>");
+        // 인덱스 5이상 8미만까지 문자열을 잘라서 반환한다.
+        document.write(a.slice(5, 8) + "<br>");
+        // 5번째부터 3개를 잘라서 그 문자열을 반환
+        document.write(a.substr(5, 3) + "<br>");
+        // 대문자로 전부 변경
+        document.write(a.toUpperCase() + "<br>");
+        // and를 찾아서 or로 바꿔준다.
+        document.write(a.replace("and", "or") + "<br>");
+        // (공백)csc(공백) - csc
+        document.write(" csc ".trim() + "<br><hr>");
+
+        // " "(띄어쓰기)를 기준으로 나눠준다. 즉 문자열 배열을 만들어서 반환
+        var sub = a.split(" ");
+        document.write("a를 빈칸으로 분리<br>");
+        for (var i = 0; i < sub.length; i++)
+            document.write("sub" + i + "=" + sub[i] + "<br>");
+
+        document.write("<hr>String 메소드를 실행 후 a와 b 변함 없음<br>");
+        document.write("a : " + a + "<br>");
+        document.write("b : " + b + "<br>");
+    </script>
+</body>
+
+</html>
