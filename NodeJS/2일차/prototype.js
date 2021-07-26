@@ -20,6 +20,8 @@ let Warrior = function(type, firstName, lastName) {
 };
 
 Warrior.prototype = Object.create(Player.prototype);
+
+// 상속하는 부분
 Warrior.prototype.constructor = Warrior;
 Warrior.prototype.sayName = function() {
     console.log(`${this.firstName} ${this.lastName}`);
