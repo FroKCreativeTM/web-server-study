@@ -4,6 +4,13 @@ const fs = require('fs').promises;
 // 유저들의 데이터를 넣을 공간을 하나 만들어준다.
 const users = {};
 
+/*
+    복습 중점 포인트
+    1. REST 감 잡기
+    2. url 감 잡기
+    3. AJAX 감 잡기(axios를 기반으로)
+*/
+
 http.createServer(async (req, res) => {
     try {
         // 요청쪽에 어떤 HTTP 메서드를 보냈나!
